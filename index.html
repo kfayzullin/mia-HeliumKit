@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mia-heliumkit by 7factory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Mia-heliumkit</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/7factory/mia-HeliumKit" class="btn">View on GitHub</a>
+      <a href="https://github.com/7factory/mia-HeliumKit/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/7factory/mia-HeliumKit/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><img src="https://raw.githubusercontent.com/7factory/mia-HydrogenKit/gh-pages/images/helium_400px.png" alt="logo" title="Hydrogen Logo"></p>
+
+<h1>
+<a id="heliumkit" class="anchor" href="#heliumkit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>HeliumKit</h1>
+
+<p>An iOS Middleware access library for Mia-js.</p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>iOS &gt;= 8.0, Swift</p>
+
+<h2>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup</h2>
+
+<p>Add HeliumKit to your Podfile.</p>
+
+<div class="highlight highlight-source-ruby"><pre>pod <span class="pl-s"><span class="pl-pds">"</span>HeliumKit<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>~&gt; 1.0<span class="pl-pds">"</span></span></pre></div>
+
+<p>Run <code>pod install</code>.</p>
+
+<h2>
+<a id="general-usage" class="anchor" href="#general-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General Usage</h2>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">// Struct containing a decoded TVShow.</span>
+<span class="pl-k">struct</span> TVShow: Decodable, FieldsSelector {
+    <span class="pl-k">static</span> <span class="pl-k">var</span> selectionString: <span class="pl-c1">String</span> { <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>{id,titles{default},images{url}}<span class="pl-pds">"</span></span> }
+
+    <span class="pl-k">let</span> id: <span class="pl-c1">String</span>
+    <span class="pl-k">let</span> title: <span class="pl-c1">String</span>
+    <span class="pl-k">let</span> imageURL: NSURL
+
+    <span class="pl-k">static</span> <span class="pl-k">func</span> <span class="pl-en">decode</span>(data: NSData) <span class="pl-k">-&gt;</span> TVShow? {
+        <span class="pl-c">// dataToJSON is a helper method provided by the Decodable protocol.</span>
+        <span class="pl-k">let</span> json <span class="pl-k">=</span> dataToJSON(data)
+        <span class="pl-c">// Extract properties from decoded JSON here and initialize struct...</span>
+        <span class="pl-k">return</span> <span class="pl-k">self</span><span class="pl-k">.</span><span class="pl-k">init</span>(
+          id: id,
+          title: title, 
+          imageURL: imageURL
+        )
+    }
+}
+
+<span class="pl-c">// Configuration for device registration.</span>
+<span class="pl-k">let</span> deviceConfiguration <span class="pl-k">=</span> DeviceConfiguration(
+    URL: NSURL(string: <span class="pl-s"><span class="pl-pds">"</span>https://mobileapi-stage.prosiebensat1.com/7tv/mobile/v1/devices<span class="pl-pds">"</span></span>)<span class="pl-k">!</span>,
+    deviceInfo: DeviceInfo(bundle: NSBundle<span class="pl-k">.</span>mainBundle(), carrierName: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>),
+    persistenceStore: DeviceConfigurationUserDefaultsStore()
+)
+
+<span class="pl-c">// Create Helium with configuration. </span>
+<span class="pl-k">let</span> config <span class="pl-k">=</span> HeliumConfiguration(
+    secret: <span class="pl-s"><span class="pl-pds">"</span>YourClientSecret<span class="pl-pds">"</span></span>,
+    secretID: <span class="pl-s"><span class="pl-pds">"</span>YourClientSecretID<span class="pl-pds">"</span></span>,
+    baseURL: NSURL(string: <span class="pl-s"><span class="pl-pds">"</span>https://mobileapi-stage.prosiebensat1.com<span class="pl-pds">"</span></span>)<span class="pl-k">!</span>,
+    acceptableStatusCodes: <span class="pl-c1">200</span><span class="pl-k">..&lt;</span><span class="pl-c1">300</span>,
+    deviceConfiguration: deviceConfiguration
+)
+
+<span class="pl-k">let</span> helium <span class="pl-k">=</span> Helium(configuration: config, authenticationHashFunction: HashFunctions<span class="pl-k">.</span>sha256)
+
+<span class="pl-c">// Perform get call and retrieve decoded TVShow.</span>
+<span class="pl-k">let</span> task <span class="pl-k">=</span> helium<span class="pl-k">.</span><span class="pl-k">get</span>(<span class="pl-s"><span class="pl-pds">"</span>/7tv/mobile/v1/tvshows/:id<span class="pl-pds">"</span></span>, returnType: TVShow<span class="pl-k">.</span><span class="pl-k">self</span>)
+  <span class="pl-k">.</span>pathReplacements([<span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>1032808<span class="pl-pds">"</span></span>])
+  <span class="pl-k">.</span>parameters([<span class="pl-s"><span class="pl-pds">"</span>limit<span class="pl-pds">"</span></span>: <span class="pl-c1">100</span>])
+  <span class="pl-k">.</span>completion { result <span class="pl-k">in</span>
+    <span class="pl-k">switch</span> result {
+    <span class="pl-k">case</span> <span class="pl-k">.</span>Success(<span class="pl-k">let</span> tvShow, _, _):
+
+    <span class="pl-k">case</span> <span class="pl-k">.</span>Error(<span class="pl-k">let</span> error, _):
+
+    }
+}</pre></div>
+
+<p>The snippet above uses four main steps to perform a middleware call:</p>
+
+<ul>
+<li>A struct is defined that implements the <code>Decodable</code> protocol for decoding the middleware JSON response into basic data for a TVShow.</li>
+<li>Configuration objects for device registration and Helium are created. Please contact the ProSiebenSat.1 Mobile Middleware Team to get valid parameters for your use case. </li>
+<li>An instance of Helium is created with the previously defined configuration object.</li>
+<li>A GET call is performed. The call is configured with the path for a specific TVShow, the return type of the response (the TVShow struct defined in step 1), and GET parameters (e.g., "limit" in this case). The final completion method starts the call and takes a closure that is triggered with an associated enum. The result enum is either <code>.Success</code> or <code>.Error</code>. In the success case, the first associated value contains the decoded result type. <strong>Note:</strong> You need to dispatch to the main queue if you want to update the UI here. </li>
+</ul>
+
+<h3>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h3>
+
+<p>Helium must be configured with an instance of <code>HeliumConfiguration</code>. Configuration values such as <code>secret</code>, <code>secretID</code>, and <code>baseURL</code> must be obtained from the Middleware Team. <code>acceptableStatusCodes</code> is a Swift Range specifying the HTTP status codes that are considered as success.</p>
+
+<p>The <code>DeviceConfiguration</code> class is separately configured and passed as parameter to <code>HeliumConfiguration</code>. Here, <code>URL</code> specifies the endpoint for creating, updating, and deleting devices. (Helium handles registering and updating devices internally.)</p>
+
+<p>For the parameter <code>deviceInfo</code>, an instance of the class <code>DeviceInfo</code> is injected. This class is configured with the application bundle and an optional carrier name. The class then internally queries various details about the device and OS. Details such as the app identifier and version string are read from the passed in bundle. (Please contact the Middleware Team for valid values.)  </p>
+
+<p>The persistence strategy for how the device token is stored can be configured with the parameter <code>persistenceStore</code>. You can choose <code>DeviceConfigurationUserDefaultsStore</code>, which stores the token in the user defaults, or create your own store (with Keychain storage, for instance) by implementing the <code>DeviceConfigurationPersistenceStore</code> protocol. </p>
+
+<h3>
+<a id="decoding--encoding" class="anchor" href="#decoding--encoding" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Decoding / Encoding</h3>
+
+<p>In its <code>get</code>, <code>post</code>, <code>put</code> and <code>delete</code> methods, Helium allows you to specify a type that the middleware response is decoded to. These types need to conform to the <code>Decodable</code> protocol and implement a static <code>decode</code> method. This method is called by Helium and receives an <code>NSData</code> object. Using the convenience method <code>dataToJSON</code>, you can decode the data into JSON, extract the specific values for the struct, and return the initialized value at the end of the method.</p>
+
+<p>In your application, you could, for instance, define a TVShow and a Video struct and then set the metatype value of these structs for the parameter <code>returnType</code> (e.g., <code>helium.get("/7tv/mobile/v1/tvshows/:id", returnType: TVShow.self</code>). The completion closure then receives a decoded value of this type when the response was successful. </p>
+
+<h3>
+<a id="performing-requests" class="anchor" href="#performing-requests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Performing Requests</h3>
+
+<p>Helium provides a fluent interface that allows you to chain multiple options as needed and then start the call using the <code>complete</code> method at the end of the chain. The four main methods are <code>get</code>, <code>post</code>, <code>put</code> and <code>delete</code>. The first parameter is the path that is appended to the base path (configured via <code>HeliumConfiguration</code>), the second parameter is the metatype value for the return type (see previous section).</p>
+
+<p>You can chain the main methods with calls to <code>parameters</code> (a dictionary containing query parameters) and <code>pathReplacements</code>(a dictionary with replacements for the <code>path</code> parameter). <code>timeout</code> allows you to set a per request timeout value for a call. The chain must always be ended with a call to the <code>completion</code> method. The completion closure is then triggered with an associated enum for for the success and error cases (see the example). </p>
+
+<h3>
+<a id="cancelling-requests" class="anchor" href="#cancelling-requests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cancelling Requests</h3>
+
+<p>Helium methods return a <code>Task</code> object for the final <code>complete</code> call. The <code>Task</code>provides a <code>cancel()</code> method.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/7factory/mia-HeliumKit">Mia-heliumkit</a> is maintained by <a href="https://github.com/7factory">7factory</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>

@@ -19,7 +19,7 @@ Run `pod install`.
 
 ``` swift
 // Struct containing a decoded TVShow.
-struct TVShow: Decodable, FieldsSelector {
+struct TVShow: Decodable {
     static var selectionString: String { return "{id,titles{default},images{url}}" }
     
     let id: String

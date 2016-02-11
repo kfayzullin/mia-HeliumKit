@@ -1,0 +1,25 @@
+PODS:
+  - HydrogenKit (1.0.171)
+  - OHHTTPStubs (4.6.0):
+    - OHHTTPStubs/Default (= 4.6.0)
+  - OHHTTPStubs/Core (4.6.0)
+  - OHHTTPStubs/Default (4.6.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (4.6.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (4.6.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (4.6.0)
+
+DEPENDENCIES:
+  - HydrogenKit (= 1.0.171)
+  - OHHTTPStubs (~> 4.2)
+
+SPEC CHECKSUMS:
+  HydrogenKit: 33fac9c3152e6def8000d5779ba66c376a9f13d4
+  OHHTTPStubs: cb1aefbbeb4de4e741644455d4b945538e5248a2
+
+COCOAPODS: 0.39.0

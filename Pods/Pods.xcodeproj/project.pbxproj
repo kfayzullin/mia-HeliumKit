@@ -1,0 +1,911 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0465EA51C5AF5E2591E1001D63CB51B1 /* Hydrogen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1BB85F05A44FB6B1F8A3A9B45B44FF /* Hydrogen.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0EB4EC9ECF14A9627D44573C9E55FA98 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8180C499026263A39AE5E80F3840B4 /* Resource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0FB89E14717515003024E8EC00368BCD /* Pods-HeliumKitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14334F909857534A7017C547BA73F839 /* Pods-HeliumKitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12D2F7AA45E613F050F3BF2F39BBA47B /* OHHTTPStubsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = FB883964BD970FA177289166FE3D0253 /* OHHTTPStubsResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13FF1382E36C62E120C3A46B15300A98 /* Pods-HeliumKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF633630B14AD5D1122AB73615E1908 /* Pods-HeliumKit-dummy.m */; };
+		247FF6CB649588BB969C04ED615A3449 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */; };
+		28C418C22F745882D869A7970192D116 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */; };
+		2A5FD5068DD4AC0FD094CA068866DC18 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB49F6B88FFD3E4C24E4B4A1185A6BE /* Request.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		32A59DBF168A9B955C020B5719EBCB0D /* OHHTTPStubsResponse+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 05AC0F99FD69A98EC994BC58EB9D0C3E /* OHHTTPStubsResponse+JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		387B673926C97011BC576EC8064530A6 /* OHHTTPStubs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 747A7E20AA53AE51C3F711948C6B6DF2 /* OHHTTPStubs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		507B6838A01BC223B9B1618A4C142519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */; };
+		59472173F252BD08A53AC05B1BD0C286 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2504822290D66B7F36ECB0E67D3288 /* Result.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		623FD70CADFD4593E65178BBAD28298E /* OHHTTPStubs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4610ADB283BEAB076F93661E90C7BAEE /* OHHTTPStubs-dummy.m */; };
+		7580076E88F45DEC5A4F17DDC98BBEEC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9095EDE2595047DD02FAB730519EA02 /* Task.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7910427AE0EF003B8D0579F4F72B5D7A /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D48E0AFF5C1B266AAD897DCA27B8B53 /* OHHTTPStubsResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7D20D973B646BC496FD1DC2E2935E031 /* OHHTTPStubsResponse+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE811A46D2CA660819724024EE95E46 /* OHHTTPStubsResponse+JSON.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		817CF0743BFAEB4E4CDBE887947C3136 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A179738F43EE0882C8C78B3946F755 /* URLRequestBuilder.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		876EDA2433FA95337E2D771F302C5203 /* OHHTTPStubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F4A2B47A22C1390C53A6AD31D0AD07C /* OHHTTPStubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D40F34E21C0ACE65FD1FD2992CEB74A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */; };
+		9156E9377C8B3B86B6A35679BFFB88E5 /* OHPathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BD90DAFDFBFD30B5A009838F6FBE9DA8 /* OHPathHelpers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		925CF11DA1371D1B750B04C443F48462 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BD1DE0DAC7AF9BD8C1EA3758E5F3AC /* CFNetwork.framework */; };
+		9C338D30FC1D5628FAB4A95E2C8A91C3 /* Pods-HeliumKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BCD882C4D156CD5B8A6A7A2022241FD /* Pods-HeliumKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A194DEE96E5D5C9D61FD6CFCB61E91BD /* Compatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = DB3EC6F56B5482D7DDFC6A4FD93C2224 /* Compatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6CCC994A5541AB7ADE2DA96E90CC702 /* OHPathHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = DA5DCC92F20C7BBCB223EEABE1DCC103 /* OHPathHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A712D94E1B3BECA5996DF589B613A494 /* OHHTTPStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1218C1A0B0ADEEEEEF1524214E2609B1 /* OHHTTPStubs.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A8DD9AC655FCD054D568B0EA1A911CD3 /* HydrogenKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A0E9292674F99BF4456563E9A16095D /* HydrogenKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE867167686953AE031736E3A9AA55E6 /* Pods-HeliumKitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D89FFF0ABC016A236AB1D6AD00D14D4F /* Pods-HeliumKitTests-dummy.m */; };
+		CE28DAF14678D6928C1720B9A827FF4F /* HydrogenKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4DC4702AA6157E0C621D25E9A60328 /* HydrogenKit-dummy.m */; };
+		F246DF942726D7FFC6AE14B83E6939E0 /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CB976386B23D9DD500FF699E7AF67E80 /* OHHTTPStubs+NSURLSessionConfiguration.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		013FCA5E7094C3AF36F0A2ADAA847BE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EE13D1A0942C270194DF689D2B14179;
+			remoteInfo = HydrogenKit;
+		};
+		608C8B0BBEE6A4B5667095BEE2ED495D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9F753D23B3A010D0E2EB0AE0405D595;
+			remoteInfo = OHHTTPStubs;
+		};
+		83FFA6A11A2394F02EF61B42CE9B119F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EE13D1A0942C270194DF689D2B14179;
+			remoteInfo = HydrogenKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03421E463EAE83F85B9C1A7B836ACA2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05AC0F99FD69A98EC994BC58EB9D0C3E /* OHHTTPStubsResponse+JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OHHTTPStubsResponse+JSON.h"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.h"; sourceTree = "<group>"; };
+		0716593381EFD46813FF7509E0B38968 /* OHHTTPStubs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OHHTTPStubs.xcconfig; sourceTree = "<group>"; };
+		1218C1A0B0ADEEEEEF1524214E2609B1 /* OHHTTPStubs.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubs.m; path = OHHTTPStubs/Sources/OHHTTPStubs.m; sourceTree = "<group>"; };
+		14334F909857534A7017C547BA73F839 /* Pods-HeliumKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HeliumKitTests-umbrella.h"; sourceTree = "<group>"; };
+		1740D86088DE17362B012CD2AE5E19E2 /* Pods-HeliumKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeliumKit.debug.xcconfig"; sourceTree = "<group>"; };
+		1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		19B47750425BECBBDA3A77017249ED10 /* Pods-HeliumKitTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeliumKitTests-resources.sh"; sourceTree = "<group>"; };
+		2A0E9292674F99BF4456563E9A16095D /* HydrogenKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HydrogenKit-umbrella.h"; sourceTree = "<group>"; };
+		2BF633630B14AD5D1122AB73615E1908 /* Pods-HeliumKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HeliumKit-dummy.m"; sourceTree = "<group>"; };
+		398C4D24451E76609E8134A2510D69BA /* Pods-HeliumKit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeliumKit-frameworks.sh"; sourceTree = "<group>"; };
+		3BCD882C4D156CD5B8A6A7A2022241FD /* Pods-HeliumKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HeliumKit-umbrella.h"; sourceTree = "<group>"; };
+		3DE811A46D2CA660819724024EE95E46 /* OHHTTPStubsResponse+JSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubsResponse+JSON.m"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.m"; sourceTree = "<group>"; };
+		4610ADB283BEAB076F93661E90C7BAEE /* OHHTTPStubs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs-dummy.m"; sourceTree = "<group>"; };
+		4D48E0AFF5C1B266AAD897DCA27B8B53 /* OHHTTPStubsResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubsResponse.m; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.m; sourceTree = "<group>"; };
+		5B620971CDCDA9874CF0B61317AE55BD /* Pods-HeliumKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeliumKit-resources.sh"; sourceTree = "<group>"; };
+		5E1861E5C98B8ABA17F720A162F0D3B7 /* OHHTTPStubs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = OHHTTPStubs.modulemap; sourceTree = "<group>"; };
+		5E2504822290D66B7F36ECB0E67D3288 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = HydrogenKit/Result.swift; sourceTree = "<group>"; };
+		5F8180C499026263A39AE5E80F3840B4 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = HydrogenKit/Resource.swift; sourceTree = "<group>"; };
+		615370FD3B0780B809B31617D418B3B8 /* Pods-HeliumKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeliumKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		62BD1DE0DAC7AF9BD8C1EA3758E5F3AC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		6B6B476BBD6332677F8FD398C65871F4 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FF6E5520E9E52F51AB18563B3C4D7F7 /* Pods-HeliumKitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HeliumKitTests.modulemap"; sourceTree = "<group>"; };
+		741FA841FC6E583E36A2C7AE137E65C0 /* Pods-HeliumKitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HeliumKitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		747A7E20AA53AE51C3F711948C6B6DF2 /* OHHTTPStubs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-umbrella.h"; sourceTree = "<group>"; };
+		777A25277912CF7E071C67A0DFA08C99 /* Pods-HeliumKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeliumKit.release.xcconfig"; sourceTree = "<group>"; };
+		7F4A2B47A22C1390C53A6AD31D0AD07C /* OHHTTPStubs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubs.h; path = OHHTTPStubs/Sources/OHHTTPStubs.h; sourceTree = "<group>"; };
+		82FC6D04E95C7BA3E3E6EF93F7A5A451 /* Pods-HeliumKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HeliumKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		899F35BAF71C77E128AAC62F6690F2A6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D4DC4702AA6157E0C621D25E9A60328 /* HydrogenKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HydrogenKit-dummy.m"; sourceTree = "<group>"; };
+		93969A12B2957470FF306FB1D7AA7A20 /* HydrogenKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HydrogenKit.modulemap; sourceTree = "<group>"; };
+		9BB984BA0CE3A9BF09E0B7CFC8B103F9 /* Pods-HeliumKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeliumKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABCA73F5B4248E81075379DCF41C56E4 /* Pods-HeliumKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HeliumKit.modulemap"; sourceTree = "<group>"; };
+		AF45AFF7366C9430FD37D03428A62B83 /* Pods_HeliumKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeliumKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B50D50603600DE460BABE986179A8C46 /* Pods-HeliumKitTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeliumKitTests-frameworks.sh"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD90DAFDFBFD30B5A009838F6FBE9DA8 /* OHPathHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHPathHelpers.m; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.m; sourceTree = "<group>"; };
+		BEB49F6B88FFD3E4C24E4B4A1185A6BE /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = HydrogenKit/Request.swift; sourceTree = "<group>"; };
+		CB1D2C47799EC59361D7370FF27D018B /* HydrogenKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HydrogenKit.xcconfig; sourceTree = "<group>"; };
+		CB976386B23D9DD500FF699E7AF67E80 /* OHHTTPStubs+NSURLSessionConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubs+NSURLSessionConfiguration.m"; path = "OHHTTPStubs/Sources/NSURLSession/OHHTTPStubs+NSURLSessionConfiguration.m"; sourceTree = "<group>"; };
+		D89FFF0ABC016A236AB1D6AD00D14D4F /* Pods-HeliumKitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HeliumKitTests-dummy.m"; sourceTree = "<group>"; };
+		D9095EDE2595047DD02FAB730519EA02 /* Task.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Task.swift; path = HydrogenKit/Task.swift; sourceTree = "<group>"; };
+		DA5DCC92F20C7BBCB223EEABE1DCC103 /* OHPathHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHPathHelpers.h; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.h; sourceTree = "<group>"; };
+		DB3EC6F56B5482D7DDFC6A4FD93C2224 /* Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Compatibility.h; path = OHHTTPStubs/Sources/Compatibility.h; sourceTree = "<group>"; };
+		DFF0A3F3092E7F43909B44166D24C93B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2A179738F43EE0882C8C78B3946F755 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLRequestBuilder.swift; path = HydrogenKit/URLRequestBuilder.swift; sourceTree = "<group>"; };
+		E920DB3F771301F69524C6E8A4FD6E9F /* Pods_HeliumKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeliumKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98886B8A57BA459CFD69FC3BC4265B3 /* Pods-HeliumKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HeliumKit-acknowledgements.plist"; sourceTree = "<group>"; };
+		E9911D554DDDD95B2B372FBAC7719644 /* OHHTTPStubs-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-prefix.pch"; sourceTree = "<group>"; };
+		EC1BB85F05A44FB6B1F8A3A9B45B44FF /* Hydrogen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hydrogen.swift; path = HydrogenKit/Hydrogen.swift; sourceTree = "<group>"; };
+		F375A7EE932A4C1A69F3211CBFBDA11B /* Pods-HeliumKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HeliumKit-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F66B737FCF2333297D15F51F41B4B3E6 /* HydrogenKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HydrogenKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9FB9B8E75C7BB0923DD0137E928D083 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB883964BD970FA177289166FE3D0253 /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubsResponse.h; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.h; sourceTree = "<group>"; };
+		FE60560FB462F0A9D6A501D41352E99B /* HydrogenKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HydrogenKit-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1769C26757AEA61B2240679819198221 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507B6838A01BC223B9B1618A4C142519 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AAF522BEA6B1A6515E95C0F4AAFD026 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D40F34E21C0ACE65FD1FD2992CEB74A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6EF2F6AB2EC7AF7DA9DB4C3F2C450AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925CF11DA1371D1B750B04C443F48462 /* CFNetwork.framework in Frameworks */,
+				28C418C22F745882D869A7970192D116 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6482C038F1F5E80B35AC24F6AD8A7A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247FF6CB649588BB969C04ED615A3449 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		283D139CEBA735CE9D05B6AB48415101 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFF0A3F3092E7F43909B44166D24C93B /* Info.plist */,
+				5E1861E5C98B8ABA17F720A162F0D3B7 /* OHHTTPStubs.modulemap */,
+				0716593381EFD46813FF7509E0B38968 /* OHHTTPStubs.xcconfig */,
+				4610ADB283BEAB076F93661E90C7BAEE /* OHHTTPStubs-dummy.m */,
+				E9911D554DDDD95B2B372FBAC7719644 /* OHHTTPStubs-prefix.pch */,
+				747A7E20AA53AE51C3F711948C6B6DF2 /* OHHTTPStubs-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OHHTTPStubs";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFF9046D2410B3E36331C4861D1F7945 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49D00F686C11EFEC80E2DC1B29CB8934 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5248F96D2DF1D7BC0D74F24CEB31504 /* Pods-HeliumKit */,
+				B9638C602610F9DC5805FD5554774339 /* Pods-HeliumKitTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		70927484A3AEA0D8FA7479D63233AFD0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DB3EC6F56B5482D7DDFC6A4FD93C2224 /* Compatibility.h */,
+				7F4A2B47A22C1390C53A6AD31D0AD07C /* OHHTTPStubs.h */,
+				1218C1A0B0ADEEEEEF1524214E2609B1 /* OHHTTPStubs.m */,
+				FB883964BD970FA177289166FE3D0253 /* OHHTTPStubsResponse.h */,
+				4D48E0AFF5C1B266AAD897DCA27B8B53 /* OHHTTPStubsResponse.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				B76A0AE6A383B99EE4841EC68824BBAC /* Pods */,
+				AEFD5D949E1F350F57E4EBD86F14097D /* Products */,
+				49D00F686C11EFEC80E2DC1B29CB8934 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7E46312E01EB09C1526CA3F92AF2A0C9 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				05AC0F99FD69A98EC994BC58EB9D0C3E /* OHHTTPStubsResponse+JSON.h */,
+				3DE811A46D2CA660819724024EE95E46 /* OHHTTPStubsResponse+JSON.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		9D6B0E4F1F6270462C341C874F798839 /* OHHTTPStubs */ = {
+			isa = PBXGroup;
+			children = (
+				70927484A3AEA0D8FA7479D63233AFD0 /* Core */,
+				7E46312E01EB09C1526CA3F92AF2A0C9 /* JSON */,
+				F58B3B6A8BACA1B5286E11B7D9CDF2CA /* NSURLSession */,
+				AB3CF5EB1F3EC59DCE56A0BB8EF4DF54 /* OHPathHelpers */,
+				283D139CEBA735CE9D05B6AB48415101 /* Support Files */,
+			);
+			path = OHHTTPStubs;
+			sourceTree = "<group>";
+		};
+		AB3CF5EB1F3EC59DCE56A0BB8EF4DF54 /* OHPathHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				DA5DCC92F20C7BBCB223EEABE1DCC103 /* OHPathHelpers.h */,
+				BD90DAFDFBFD30B5A009838F6FBE9DA8 /* OHPathHelpers.m */,
+			);
+			name = OHPathHelpers;
+			sourceTree = "<group>";
+		};
+		AEFD5D949E1F350F57E4EBD86F14097D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F66B737FCF2333297D15F51F41B4B3E6 /* HydrogenKit.framework */,
+				6B6B476BBD6332677F8FD398C65871F4 /* OHHTTPStubs.framework */,
+				AF45AFF7366C9430FD37D03428A62B83 /* Pods_HeliumKit.framework */,
+				E920DB3F771301F69524C6E8A4FD6E9F /* Pods_HeliumKitTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B76A0AE6A383B99EE4841EC68824BBAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0C18B427F3D064EE566BEC92B991473 /* HydrogenKit */,
+				9D6B0E4F1F6270462C341C874F798839 /* OHHTTPStubs */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9638C602610F9DC5805FD5554774339 /* Pods-HeliumKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				03421E463EAE83F85B9C1A7B836ACA2C /* Info.plist */,
+				6FF6E5520E9E52F51AB18563B3C4D7F7 /* Pods-HeliumKitTests.modulemap */,
+				741FA841FC6E583E36A2C7AE137E65C0 /* Pods-HeliumKitTests-acknowledgements.markdown */,
+				82FC6D04E95C7BA3E3E6EF93F7A5A451 /* Pods-HeliumKitTests-acknowledgements.plist */,
+				D89FFF0ABC016A236AB1D6AD00D14D4F /* Pods-HeliumKitTests-dummy.m */,
+				B50D50603600DE460BABE986179A8C46 /* Pods-HeliumKitTests-frameworks.sh */,
+				19B47750425BECBBDA3A77017249ED10 /* Pods-HeliumKitTests-resources.sh */,
+				14334F909857534A7017C547BA73F839 /* Pods-HeliumKitTests-umbrella.h */,
+				9BB984BA0CE3A9BF09E0B7CFC8B103F9 /* Pods-HeliumKitTests.debug.xcconfig */,
+				615370FD3B0780B809B31617D418B3B8 /* Pods-HeliumKitTests.release.xcconfig */,
+			);
+			name = "Pods-HeliumKitTests";
+			path = "Target Support Files/Pods-HeliumKitTests";
+			sourceTree = "<group>";
+		};
+		BB030354F83DCD8DCF6A3C5C77D53857 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				93969A12B2957470FF306FB1D7AA7A20 /* HydrogenKit.modulemap */,
+				CB1D2C47799EC59361D7370FF27D018B /* HydrogenKit.xcconfig */,
+				8D4DC4702AA6157E0C621D25E9A60328 /* HydrogenKit-dummy.m */,
+				FE60560FB462F0A9D6A501D41352E99B /* HydrogenKit-prefix.pch */,
+				2A0E9292674F99BF4456563E9A16095D /* HydrogenKit-umbrella.h */,
+				F9FB9B8E75C7BB0923DD0137E928D083 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HydrogenKit";
+			sourceTree = "<group>";
+		};
+		C5248F96D2DF1D7BC0D74F24CEB31504 /* Pods-HeliumKit */ = {
+			isa = PBXGroup;
+			children = (
+				899F35BAF71C77E128AAC62F6690F2A6 /* Info.plist */,
+				ABCA73F5B4248E81075379DCF41C56E4 /* Pods-HeliumKit.modulemap */,
+				F375A7EE932A4C1A69F3211CBFBDA11B /* Pods-HeliumKit-acknowledgements.markdown */,
+				E98886B8A57BA459CFD69FC3BC4265B3 /* Pods-HeliumKit-acknowledgements.plist */,
+				2BF633630B14AD5D1122AB73615E1908 /* Pods-HeliumKit-dummy.m */,
+				398C4D24451E76609E8134A2510D69BA /* Pods-HeliumKit-frameworks.sh */,
+				5B620971CDCDA9874CF0B61317AE55BD /* Pods-HeliumKit-resources.sh */,
+				3BCD882C4D156CD5B8A6A7A2022241FD /* Pods-HeliumKit-umbrella.h */,
+				1740D86088DE17362B012CD2AE5E19E2 /* Pods-HeliumKit.debug.xcconfig */,
+				777A25277912CF7E071C67A0DFA08C99 /* Pods-HeliumKit.release.xcconfig */,
+			);
+			name = "Pods-HeliumKit";
+			path = "Target Support Files/Pods-HeliumKit";
+			sourceTree = "<group>";
+		};
+		E0C18B427F3D064EE566BEC92B991473 /* HydrogenKit */ = {
+			isa = PBXGroup;
+			children = (
+				EC1BB85F05A44FB6B1F8A3A9B45B44FF /* Hydrogen.swift */,
+				BEB49F6B88FFD3E4C24E4B4A1185A6BE /* Request.swift */,
+				5F8180C499026263A39AE5E80F3840B4 /* Resource.swift */,
+				5E2504822290D66B7F36ECB0E67D3288 /* Result.swift */,
+				D9095EDE2595047DD02FAB730519EA02 /* Task.swift */,
+				E2A179738F43EE0882C8C78B3946F755 /* URLRequestBuilder.swift */,
+				BB030354F83DCD8DCF6A3C5C77D53857 /* Support Files */,
+			);
+			path = HydrogenKit;
+			sourceTree = "<group>";
+		};
+		F58B3B6A8BACA1B5286E11B7D9CDF2CA /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				CB976386B23D9DD500FF699E7AF67E80 /* OHHTTPStubs+NSURLSessionConfiguration.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		FFF9046D2410B3E36331C4861D1F7945 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				62BD1DE0DAC7AF9BD8C1EA3758E5F3AC /* CFNetwork.framework */,
+				1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		07C9376D4D9C94825EB5326FFAED5CE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C338D30FC1D5628FAB4A95E2C8A91C3 /* Pods-HeliumKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABAB0D5A85C7037A9C0114BF313562DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A194DEE96E5D5C9D61FD6CFCB61E91BD /* Compatibility.h in Headers */,
+				387B673926C97011BC576EC8064530A6 /* OHHTTPStubs-umbrella.h in Headers */,
+				876EDA2433FA95337E2D771F302C5203 /* OHHTTPStubs.h in Headers */,
+				32A59DBF168A9B955C020B5719EBCB0D /* OHHTTPStubsResponse+JSON.h in Headers */,
+				12D2F7AA45E613F050F3BF2F39BBA47B /* OHHTTPStubsResponse.h in Headers */,
+				A6CCC994A5541AB7ADE2DA96E90CC702 /* OHPathHelpers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BED4C82937A73F991F41921307C6989C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FB89E14717515003024E8EC00368BCD /* Pods-HeliumKitTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDBEA3669C4D17A75AF984A45A8E5C41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8DD9AC655FCD054D568B0EA1A911CD3 /* HydrogenKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3104FFD166026D71D255C6D95B39EA3D /* Pods-HeliumKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35E84BE372261BCBAF543A264D947129 /* Build configuration list for PBXNativeTarget "Pods-HeliumKit" */;
+			buildPhases = (
+				26BF37E32CB9EFF12E999B1F2AFA726E /* Sources */,
+				3AAF522BEA6B1A6515E95C0F4AAFD026 /* Frameworks */,
+				07C9376D4D9C94825EB5326FFAED5CE0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				419CCEDE773E5F27B8ACD1BCDD80E674 /* PBXTargetDependency */,
+			);
+			name = "Pods-HeliumKit";
+			productName = "Pods-HeliumKit";
+			productReference = AF45AFF7366C9430FD37D03428A62B83 /* Pods_HeliumKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7EE13D1A0942C270194DF689D2B14179 /* HydrogenKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FADE5A83DC919C5E1A6A6FC15AB098A6 /* Build configuration list for PBXNativeTarget "HydrogenKit" */;
+			buildPhases = (
+				361EB384D26AD015F248A7DAFDB16D48 /* Sources */,
+				F6482C038F1F5E80B35AC24F6AD8A7A0 /* Frameworks */,
+				CDBEA3669C4D17A75AF984A45A8E5C41 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HydrogenKit;
+			productName = HydrogenKit;
+			productReference = F66B737FCF2333297D15F51F41B4B3E6 /* HydrogenKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		87C21978B9B06E00F30471BF00C6B94B /* Pods-HeliumKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B2D7E4028008E5FAEFDF0AEE958FE54 /* Build configuration list for PBXNativeTarget "Pods-HeliumKitTests" */;
+			buildPhases = (
+				A4B883ACF513B98C21684C229D454892 /* Sources */,
+				1769C26757AEA61B2240679819198221 /* Frameworks */,
+				BED4C82937A73F991F41921307C6989C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1AFB02555EA630AFBACC98BA67F5F4C /* PBXTargetDependency */,
+				20AC10D9F9F0284052B93AAC3DC646B2 /* PBXTargetDependency */,
+			);
+			name = "Pods-HeliumKitTests";
+			productName = "Pods-HeliumKitTests";
+			productReference = E920DB3F771301F69524C6E8A4FD6E9F /* Pods_HeliumKitTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B9F753D23B3A010D0E2EB0AE0405D595 /* OHHTTPStubs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDD79B3459C7CC393C8CD0CE59B61FE3 /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */;
+			buildPhases = (
+				79A6F07414E4CA3A22DFA1E74787A8C7 /* Sources */,
+				E6EF2F6AB2EC7AF7DA9DB4C3F2C450AF /* Frameworks */,
+				ABAB0D5A85C7037A9C0114BF313562DF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OHHTTPStubs;
+			productName = OHHTTPStubs;
+			productReference = 6B6B476BBD6332677F8FD398C65871F4 /* OHHTTPStubs.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AEFD5D949E1F350F57E4EBD86F14097D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EE13D1A0942C270194DF689D2B14179 /* HydrogenKit */,
+				B9F753D23B3A010D0E2EB0AE0405D595 /* OHHTTPStubs */,
+				3104FFD166026D71D255C6D95B39EA3D /* Pods-HeliumKit */,
+				87C21978B9B06E00F30471BF00C6B94B /* Pods-HeliumKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26BF37E32CB9EFF12E999B1F2AFA726E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13FF1382E36C62E120C3A46B15300A98 /* Pods-HeliumKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		361EB384D26AD015F248A7DAFDB16D48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0465EA51C5AF5E2591E1001D63CB51B1 /* Hydrogen.swift in Sources */,
+				CE28DAF14678D6928C1720B9A827FF4F /* HydrogenKit-dummy.m in Sources */,
+				2A5FD5068DD4AC0FD094CA068866DC18 /* Request.swift in Sources */,
+				0EB4EC9ECF14A9627D44573C9E55FA98 /* Resource.swift in Sources */,
+				59472173F252BD08A53AC05B1BD0C286 /* Result.swift in Sources */,
+				7580076E88F45DEC5A4F17DDC98BBEEC /* Task.swift in Sources */,
+				817CF0743BFAEB4E4CDBE887947C3136 /* URLRequestBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A6F07414E4CA3A22DFA1E74787A8C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F246DF942726D7FFC6AE14B83E6939E0 /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */,
+				623FD70CADFD4593E65178BBAD28298E /* OHHTTPStubs-dummy.m in Sources */,
+				A712D94E1B3BECA5996DF589B613A494 /* OHHTTPStubs.m in Sources */,
+				7D20D973B646BC496FD1DC2E2935E031 /* OHHTTPStubsResponse+JSON.m in Sources */,
+				7910427AE0EF003B8D0579F4F72B5D7A /* OHHTTPStubsResponse.m in Sources */,
+				9156E9377C8B3B86B6A35679BFFB88E5 /* OHPathHelpers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B883ACF513B98C21684C229D454892 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE867167686953AE031736E3A9AA55E6 /* Pods-HeliumKitTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20AC10D9F9F0284052B93AAC3DC646B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OHHTTPStubs;
+			target = B9F753D23B3A010D0E2EB0AE0405D595 /* OHHTTPStubs */;
+			targetProxy = 608C8B0BBEE6A4B5667095BEE2ED495D /* PBXContainerItemProxy */;
+		};
+		419CCEDE773E5F27B8ACD1BCDD80E674 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HydrogenKit;
+			target = 7EE13D1A0942C270194DF689D2B14179 /* HydrogenKit */;
+			targetProxy = 013FCA5E7094C3AF36F0A2ADAA847BE9 /* PBXContainerItemProxy */;
+		};
+		A1AFB02555EA630AFBACC98BA67F5F4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HydrogenKit;
+			target = 7EE13D1A0942C270194DF689D2B14179 /* HydrogenKit */;
+			targetProxy = 83FFA6A11A2394F02EF61B42CE9B119F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3CCC54610D8BBE3E0B7DCE698D83AE11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0716593381EFD46813FF7509E0B38968 /* OHHTTPStubs.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OHHTTPStubs/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = OHHTTPStubs;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53B03D3CEC668F2C9EE546BD67E23C1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1740D86088DE17362B012CD2AE5E19E2 /* Pods-HeliumKit.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HeliumKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HeliumKit/Pods-HeliumKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_HeliumKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		66CD89CEA7CE1D6A8AC9976D8DD0E845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 777A25277912CF7E071C67A0DFA08C99 /* Pods-HeliumKit.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HeliumKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HeliumKit/Pods-HeliumKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_HeliumKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67258FC3C0C994C512D9E149F21420CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 615370FD3B0780B809B31617D418B3B8 /* Pods-HeliumKitTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HeliumKitTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HeliumKitTests/Pods-HeliumKitTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_HeliumKitTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6858E6E551B27E7E5304A7C0D0C8454E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB1D2C47799EC59361D7370FF27D018B /* HydrogenKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HydrogenKit/HydrogenKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HydrogenKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HydrogenKit/HydrogenKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = HydrogenKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A5995927C3AC0D0D2E241F451AC1A6DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB1D2C47799EC59361D7370FF27D018B /* HydrogenKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HydrogenKit/HydrogenKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HydrogenKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HydrogenKit/HydrogenKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HydrogenKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BEDADB994D2AD3D38D629207947DEAB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BB984BA0CE3A9BF09E0B7CFC8B103F9 /* Pods-HeliumKitTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HeliumKitTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HeliumKitTests/Pods-HeliumKitTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_HeliumKitTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C7B30ECE4A76D9E95B6C7063F1EC2054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0716593381EFD46813FF7509E0B38968 /* OHHTTPStubs.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OHHTTPStubs/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = OHHTTPStubs;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35E84BE372261BCBAF543A264D947129 /* Build configuration list for PBXNativeTarget "Pods-HeliumKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53B03D3CEC668F2C9EE546BD67E23C1F /* Debug */,
+				66CD89CEA7CE1D6A8AC9976D8DD0E845 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B2D7E4028008E5FAEFDF0AEE958FE54 /* Build configuration list for PBXNativeTarget "Pods-HeliumKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEDADB994D2AD3D38D629207947DEAB9 /* Debug */,
+				67258FC3C0C994C512D9E149F21420CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FADE5A83DC919C5E1A6A6FC15AB098A6 /* Build configuration list for PBXNativeTarget "HydrogenKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6858E6E551B27E7E5304A7C0D0C8454E /* Debug */,
+				A5995927C3AC0D0D2E241F451AC1A6DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDD79B3459C7CC393C8CD0CE59B61FE3 /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7B30ECE4A76D9E95B6C7063F1EC2054 /* Debug */,
+				3CCC54610D8BBE3E0B7DCE698D83AE11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

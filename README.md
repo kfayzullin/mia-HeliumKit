@@ -1,4 +1,4 @@
-![logo](https://raw.githubusercontent.com/7factory/mia-HydrogenKit/gh-pages/images/helium_400px.png "Hydrogen Logo")
+![logo](https://github.com/7factory/mia-HeliumKit/blob/gh-pages/images/helium_400px.png "Hydrogen Logo")
 # HeliumKit
 
 An iOS Middleware access library for Mia-js.

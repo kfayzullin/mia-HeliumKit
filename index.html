@@ -44,7 +44,7 @@
 <a id="general-usage" class="anchor" href="#general-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General Usage</h2>
 
 <div class="highlight highlight-source-swift"><pre><span class="pl-c">// Struct containing a decoded TVShow.</span>
-<span class="pl-k">struct</span> TVShow: Decodable, FieldsSelector {
+<span class="pl-k">struct</span> TVShow: Decodable {
     <span class="pl-k">static</span> <span class="pl-k">var</span> selectionString: <span class="pl-c1">String</span> { <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>{id,titles{default},images{url}}<span class="pl-pds">"</span></span> }
 
     <span class="pl-k">let</span> id: <span class="pl-c1">String</span>

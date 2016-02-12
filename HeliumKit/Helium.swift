@@ -1,5 +1,5 @@
 import Foundation
-import HydrogenKit
+import MIAHydrogenKit
 
 public protocol Decodable {
     static func decode(data: NSData) -> Self?
@@ -24,7 +24,7 @@ extension Encodable {
 public class RequestBuilder<T: Decodable> {
     
     var path: String?
-    var method: HydrogenKit.Method?
+    var method: MIAHydrogenKit.Method?
     var parameters: [String: AnyObject]?
     var pathReplacements: [String: String]?
     var completion: (Result<T> -> Void)?

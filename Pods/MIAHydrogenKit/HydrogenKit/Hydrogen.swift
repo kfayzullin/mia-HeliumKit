@@ -1,8 +1,9 @@
 import Foundation
 import UIKit
 
+
+/// A type-safe HTTP library utilising NSURLSession inspired by http://chris.eidhof.nl/posts/tiny-networking-in-swift.html
 public class Hydrogen {
-    
     private let allowedStatusCodesForEmptyResponse = [205, 204]
     
     private let sessionConfig: NSURLSessionConfiguration
@@ -17,6 +18,11 @@ public class Hydrogen {
     
     //MARK: Lifecycle
     
+    /**
+    - parameter config:                NSURLSessionConfiguration used in the requests default: nil
+    - parameter urlRequestBuilder:     URLRequestBuilder used to create the Requests default: nil
+    - parameter acceptableStatusCodes: A range of HTTP Status codes that is accepted as valid response default: 200..<300
+    */
     public init(config: NSURLSessionConfiguration? = nil, urlRequestBuilder: URLRequestBuilder? = nil, acceptableStatusCodes: Range<Int> = 200..<300) {
         sessionConfig = config ?? NSURLSessionConfiguration.defaultSessionConfiguration()
         self.urlRequestBuilder = urlRequestBuilder ?? URLRequestBuilder()
@@ -27,6 +33,16 @@ public class Hydrogen {
         cancelAll()
     }
     
+    /**
+     Starts a request to a specified resource
+     
+     - parameter baseURL:       Base URL of the request
+     - parameter resource:      The requested Resource
+     - parameter modifyRequest: A block to modify the request just before it is sent
+     - parameter completion:    Completion block with Result (either success or error)
+     
+     - returns: A Task instance that can be used to resume, cancel or suspend the request
+     */
     public func request<A>(baseURL: NSURL, resource: Resource<A>, modifyRequest: (NSMutableURLRequest -> Void)?, completion: Result<A> -> Void) -> Task {
         let task = Task()
         
@@ -71,10 +87,9 @@ public class Hydrogen {
             let hyrogenKitError = HydrogenKitError(code: statusCode, responseHeaders: httpResponse?.allHeaderFields as? [String: AnyObject], jsonResponse: jsonResponse, responseData: data)
             request.completion(.Error(hyrogenKitError, request))
         } else {
-            
             // parse data
             guard let parsedData = request.resource.parse(data) else {
-                // check if empty response allowed
+                // check if empty repsonse allowed
                 if allowedStatusCodesForEmptyResponse.contains(statusCode) {
                     request.completion(.Success(nil, request, statusCode))
                 } else {
@@ -84,23 +99,35 @@ public class Hydrogen {
                 }
                 return
             }
-            
             request.completion(.Success(parsedData, request, statusCode))
         }
     }
-    
+
+    /// see also: `func request<A>(baseURL: NSURL, resource: Resource<A>, modifyRequest: (NSMutableURLRequest -> Void)?, completion: Result<A> -> Void) -> Task`
     public func request<A>(baseURL: NSURL, resource: Resource<A>, completion: Result<A> -> Void) -> Task {
         return request(baseURL, resource: resource, modifyRequest: nil, completion: completion)
     }
     
+    /**
+     Executes a Request
+     
+     - parameter baseURL:  Base URL of the request
+     - parameter aRequest: The request to be executed
+     
+     - returns: A Task instance that can be used to resume, cancel or suspend the request
+     */
     public func request<A>(baseURL: NSURL, aRequest: Request<A>) -> Task {
         return request(baseURL, resource: aRequest.resource, modifyRequest: aRequest.modifyRequest, completion: aRequest.completion)
     }
     
     private func urlSession() -> NSURLSession {
+        session = session ?? NSURLSession(configuration: sessionConfig)
         return session ?? NSURLSession(configuration: sessionConfig)
     }
     
+    /**
+     Cancels all current Tasks
+     */
     public func cancelAll() {
         if let session = session {
             

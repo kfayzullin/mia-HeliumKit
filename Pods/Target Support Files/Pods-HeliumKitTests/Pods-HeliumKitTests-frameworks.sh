@@ -84,10 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-HeliumKitTests/HydrogenKit.framework"
+  install_framework "Pods-HeliumKitTests/MIAHydrogenKit.framework"
   install_framework "Pods-HeliumKitTests/OHHTTPStubs.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-HeliumKitTests/HydrogenKit.framework"
+  install_framework "Pods-HeliumKitTests/MIAHydrogenKit.framework"
   install_framework "Pods-HeliumKitTests/OHHTTPStubs.framework"
 fi

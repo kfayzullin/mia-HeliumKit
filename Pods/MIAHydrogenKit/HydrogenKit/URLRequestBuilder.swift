@@ -1,5 +1,6 @@
 import Foundation
 
+// TODO: This class should not be exposed publicly.
 public class URLRequestBuilder {
     
     public init() { }
@@ -31,6 +32,7 @@ public class URLRequestBuilder {
                 modifyRequest(urlRequest)
             }
             
+            // should the
             return urlRequest.copy() as? NSURLRequest
         }
         

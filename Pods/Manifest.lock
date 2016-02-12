@@ -1,5 +1,5 @@
 PODS:
-  - HydrogenKit (1.0.171)
+  - MIAHydrogenKit (1.0.0)
   - OHHTTPStubs (4.6.0):
     - OHHTTPStubs/Default (= 4.6.0)
   - OHHTTPStubs/Core (4.6.0)
@@ -15,11 +15,13 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (4.6.0)
 
 DEPENDENCIES:
-  - HydrogenKit (= 1.0.171)
+  - MIAHydrogenKit (= 1.0.0)
   - OHHTTPStubs (~> 4.2)
 
 SPEC CHECKSUMS:
-  HydrogenKit: 33fac9c3152e6def8000d5779ba66c376a9f13d4
+  MIAHydrogenKit: 8392febfa93fb44177f43bf8494e5a612b24d88f
   OHHTTPStubs: cb1aefbbeb4de4e741644455d4b945538e5248a2
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: fac08e1926fe9b754c223651aa19dc848929370c
+
+COCOAPODS: 1.0.0.beta.2

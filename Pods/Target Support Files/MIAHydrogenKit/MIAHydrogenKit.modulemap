@@ -1,0 +1,6 @@
+framework module MIAHydrogenKit {
+  umbrella header "MIAHydrogenKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
